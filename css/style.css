@@ -1648,6 +1648,9 @@ body {
 .main-filter-box .field-show .btn {
   width: 100%;
 }
+.main-filter-box .action-reset .btn {
+  padding: 0;
+}
 .main-filter-box .field-slider {
   width: 100%;
   padding-bottom: 22px;
@@ -1937,7 +1940,7 @@ body {
     z-index: 10;
     position: absolute;
     top: 46px;
-    right: calc(var(--paddingContainer) + 20px);
+    right: calc(var(--paddingContainer) + 50px);
   }
   .main-filter-box .filter-section-actions .action-reset .btn {
     font-size: 12px;
