@@ -1,27 +1,18 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-input[type="url"] {
-	
-}
-textarea {
-	height: 100px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	resize: none;
-}
-.btn,
-button,
-input[type="submit"] {
-	
+.frm-main-search {
+	position: relative;
+	line-height: 1;
+	.form-input {
+		padding-right: 60px;
+	}
+	.btn-action-ico {
+		z-index: 2;
+		position: absolute;
+		top: 50%;right: 10px;
+		margin-top: -20px;
+	}
 }
 .frm-row,
 .frm-field,
@@ -30,6 +21,10 @@ input[type="submit"] {
     flex-wrap: wrap;
 	position: relative;
 	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
 }
 .frm-select {
 	position: relative;
@@ -54,5 +49,179 @@ input[type="submit"] {
             display: block;
             position: absolute;
         }
+	}
+}
+.frm-select {
+	input {
+		&[type="radio"] {
+			&~label {
+				&:after {
+					width: 10px;height: 10px;
+					background: var(--clr-att);
+					border-radius: 50%;
+					margin: -5px 0 0 -5px;
+				}
+				&:before {
+					border-radius: 50%;
+				}
+			}
+		}
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		min-height: 20px;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 2px 0 0 28px;
+		font-weight: 400;
+		&:before, &:after {
+			width: 20px;height: 20px;
+			border-radius: 3px;
+			background-color: var(--clr-bg-vlight);
+			top: auto;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			top: 10px;left: 10px;
+			margin: -10px 0 0 -10px;
+		}
+		&:after {
+			border-radius: 0;
+			background: url(../img/icons/check.svg) center no-repeat;
+			background-size: 24px auto;
+			opacity: 0;
+		}
+	}
+}
+.form-disabled, .main-filter-box.show-ext .filter-main-wrap {
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 20;
+	}
+	.form-input {
+		background-color: #ECECEC !important;
+		border-color: #ECECEC !important;
+		color: #A3A3A4;
+	}
+	[placeholder]::-webkit-input-placeholder {color: #A3A3A4;}
+	[placeholder]:-moz-placeholder {color: #A3A3A4;}
+	[placeholder]::-moz-placeholder {color: #A3A3A4;}
+	[placeholder]:-ms-input-placeholder {color: #A3A3A4;}
+	select.form-input:required:invalid {
+		color: #A3A3A4;
+	}
+	.frm-field-range {
+		pointer-events: none;
+		.field-range:after,
+		.field-range-title,
+		.form-input {
+			color: #A3A3A4;
+		}
+		.ui-slider {
+			.ui-slider-range {
+				background-color: #E6EAF3;
+			}
+			.ui-slider-handle {
+				border-color: #E6EAF3;
+			}
+		}
+	}
+	.btn {
+		background-color: #ECECEC;
+		border-color: #ECECEC;
+		color: #A3A3A4;
+	}
+}
+.frm-field-range {
+	position: relative;
+	.field-range-wrap {
+		display: flex;
+		margin: 0 -7px;
+	}
+	.field-range-slider {
+		margin-top: 28px;
+	}
+	.field-range {
+		padding: 0 7px;
+		width: 50%;
+		flex-shrink: 0;
+		position: relative;
+		&:after {
+			position: absolute;
+			top: 0;bottom: 0;right: 7px;
+			padding: 0 12px 0 0;
+			font-size: 12px;
+			line-height: 47px;
+			white-space: nowrap;
+			z-index: 2;
+			font-weight: 400;
+			pointer-events: none;
+			color: var(--clr-light);
+		}
+	}
+	.field-range-slider {
+		padding: 0 12px;
+	}
+	.ui-slider {
+		height: 8px;
+		background: none;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			border-radius: 4px;
+			top: 0;
+			bottom: 0;
+			left: -12px;
+			right: -12px;
+			background: var(--clr-bg-vlight);
+		}
+		.ui-slider-range {
+			background: var(--clr-att);
+		}
+		.ui-slider-handle {
+			width: 24px;height: 24px;
+			border-radius: 50%;
+			background: #fff;
+			border: 6px solid var(--clr-att);
+			cursor: pointer;
+			top: 50%;
+			margin-top: -12px;
+			margin-left: -12px;
+			outline: none;
+		}
+	}
+	.form-input {
+		height: 47px;
+		font-size: 14px;
+		color: var(--clr-base);
+		padding: 0 0 0 37px;
+	}
+	.field-range-title {
+		display: block;
+		font-size: 12px;
+		line-height: 47px;
+		color: var(--clr-light);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 37px;
+		text-align: right;
+		z-index: 2;
+		pointer-events: none;
 	}
 }
