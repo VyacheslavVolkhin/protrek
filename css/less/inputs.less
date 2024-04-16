@@ -14,6 +14,11 @@
 	font-size: 12px;
 	color: var(--clr-base);
 	font-weight: 400;
+	&.type-bg {
+		background-color: var(--clr-bg-vlight);
+		border-color: var(--clr-bg-vlight);
+		color: var(--clr-light);
+	}
 }
 textarea.form-input {
 
@@ -80,10 +85,72 @@ select.form-input:required:invalid {
 	color: #fff;
 	border: 1px solid var(--clr-att);
 	background: var(--clr-att);
+	position: relative;
 	&:hover {
 		color: #fff;
 		background-color: var(--clr-att-hover);
 		border-color: var(--clr-att-hover);
+	}
+	&.button-dark {
+		background-color: var(--clr-base);
+		border-color: var(--clr-base);
+		color: #fff;
+		&:hover {
+			border-color: #666;
+			background-color: #666;
+		}
+	}
+	&.button-tab {
+		height: (50/14em);
+		padding: 0;
+		background: none;
+		font-size: 1em;
+		font-weight: 500;
+		color: var(--clr-light);
+		border: none;
+		box-shadow: none;
+		min-width: 0;
+		border-radius: 0;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;left: 0;right: 0;
+			height: 4px;
+			background: var(--clr-att);
+			opacity: 0;
+			transition: opacity ease 0.2s;
+		}
+		&:hover {
+			color: var(--clr-base);
+		}
+		&.active {
+			font-weight: bold;
+			color: var(--clr-base);
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	&.button-disabled {
+		pointer-events: none;
+		cursor: default;
+	}
+	&.button-filter {
+		height: 32px;
+		border-radius: 16px;
+		background-color: transparent;
+		padding: 0 20px;
+		min-width: 0;
+		font-size: 12px;
+		font-weight: 500;
+		color: var(--clr-light);
+		border: 1px dashed #BABABA;
+		&:hover, &.active {
+			background-color: transparent;
+			color: var(--clr-att);
+			border-color: var(--clr-att);
+		}
 	}
 	&.button-gray {
 		&:not(:hover, .active) {
@@ -322,9 +389,34 @@ select.form-input:required:invalid {
 			background-image: url(../img/icons/cart.svg);
 		}
 	}
-	&.ico-close {
+	&.ico-close, &.ico-del {
 		&:before {
 			background-image: url(../img/icons/close.svg);
+		}
+	}
+	&.ico-del {
+		
+	}
+	&.ico-filter {
+		&:before {
+			background-image: url(../img/icons/filter.svg);
+			background-size: 27px auto;
+		}
+	}
+	&.ico-view-rows {
+		&:before {
+			background-image: url(../img/icons/view-rows.svg);
+		}
+		&:not(:hover, .active) {
+			filter: var(--filter-gray-light);
+		}
+	}
+	&.ico-view-tiles {
+		&:before {
+			background-image: url(../img/icons/view-tiles.svg);
+		}
+		&:not(:hover, .active) {
+			filter: var(--filter-gray-light);
 		}
 	}
     &.ico-arrow {

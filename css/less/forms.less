@@ -1,6 +1,157 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-counter {
+	display: block;
+	position: relative;
+	height: 47px;
+	padding: 0 26px;
+	overflow: hidden;
+	.form-input {
+		height: 47px;
+		width: 100%;
+		border-radius: 12px;
+		border: none;
+		padding: 0 10px;
+		text-align: center;
+		background: var(--clr-bg-vlight);
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--clr-light);
+	}
+	.button-plus, .button-minus {
+		display: block;
+		width: 40px;height: 47px;
+		position: absolute;
+		top: 0;left: -14px;
+		cursor: pointer;
+		padding: 0;
+		min-width: 0;
+		background: none;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		&:before, &:after {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 2px;
+			background: #C2BEBE;
+			position: absolute;
+			top: 50%;left: 50%;
+			margin: -1px 0 0 -6px;
+		}
+		&:hover {
+			background: none;
+		}
+	}
+	.button-plus {
+		left: auto;
+		right: -14px;
+		&:before, &:after {
+			background-color: var(--clr-base);
+		}
+		&:before {
+			transform: rotate(90deg);
+		}
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type=number]{
+		-moz-appearance: textfield;
+	}
+	
+}
+.frm-field-select {
+	display: block;
+	position: relative;
+	.popup-content-block {
+		background-color: var(--clr-bg-vlight);
+		position: absolute;
+		top: 100%;left: 0;right: 0;
+		z-index: 20;
+		border-radius: 15px;
+		margin-top: 5px;
+		display: none;
+	}
+	.btn-popup-toggle, .btn-popup-item {
+		display: flex;
+		align-items: center;
+		padding: 0 35px 0 16px;
+		font-size: 12px;
+		color: var(--clr-light);
+		font-weight: 400;
+		border-radius: 15px;
+		background: var(--clr-bg-vlight);
+		height: 47px;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			background-color: var(--clr-bg-light);
+		}
+		&.active {
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			background: url(../img/icons/arrow-select.svg) center no-repeat;
+			background-size: 100% auto;
+			top: 50%;right: 18px;
+			margin-top: -12px;
+			transition: all ease 0.2s;
+		}
+		.button-ico {
+			width: 16px;height: 16px;
+			border-radius: 50%;
+			flex-shrink: 0;
+			margin: 0;
+		}
+		.button-title {
+			flex: 1;
+			padding: 0 0 0 10px;
+			display: block;
+			position: relative;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+	.list {
+		max-height: 220px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+	.btn-popup-item {
+		background: none;
+		padding-right: 15px;
+		&:before {
+			display: none;
+		}
+		&:hover {
+			background: none;
+			color: var(--clr-att);
+		}
+	}
+}
 .frm-main-search {
 	position: relative;
 	line-height: 1;
@@ -26,7 +177,7 @@
     display: block;
     width: 100%;
 }
-.frm-select {
+.frm-select, .frm-select-panel {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -51,7 +202,49 @@
         }
 	}
 }
+.frm-select-panel {
+	input {
+		&:checked {
+			&~label {
+				background-color: #fff;
+				border-color: var(--clr-att);
+				&:before {
+					border-color: var(--clr-att);
+				}
+			}
+		}
+	}
+	label {
+		font-size: 13px;
+		line-height: (18/13em);
+		font-weight: 300;
+		color: var(--clr-base);
+		display: block;
+		padding: 22px 22px 22px 72px;
+		border-radius: 15px;
+		background: var(--clr-bg-vlight);
+		border: 2px solid var(--clr-bg-vlight);
+		transition: all ease 0.2s;
+		&:before {
+			width: 20px;height: 20px;
+			border-radius: 50%;
+			background: #fff;
+			border: 5px solid #fff;
+			transition: all ease 0.2s;
+			position: absolute;
+			top: 50%;left: 29px;
+			margin-top: -10px;
+		}
+	}
+	.lbl-title {
+		font-size: 14px;
+		line-height: 15px;
+		font-weight: 600;
+		margin-bottom: 3px;
+	}
+}
 .frm-select {
+	overflow: visible;
 	input {
 		&[type="radio"] {
 			&~label {
@@ -224,4 +417,7 @@
 		z-index: 2;
 		pointer-events: none;
 	}
+}
+@media (min-width: 1024px) {
+	
 }

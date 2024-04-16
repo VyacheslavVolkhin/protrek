@@ -1,3 +1,54 @@
+//js tabs
+const tabsNav = document.querySelectorAll('.js-tabs-nav')
+const tabsBlocks = document.querySelectorAll('.js-tab-block')
+const tabsButtonTitle = document.querySelectorAll('.js-tab-title')
+const tabsButtonContent = document.querySelectorAll('.js-tab-content')
+function tabsActiveStart() {
+	for (iTab = 0; iTab < tabsBlocks.length; iTab++) {
+		if (tabsBlocks[iTab].classList.contains('active')) {
+			tabsBlocks[iTab].classList.remove('active')
+		}
+	}
+	for (i = 0; i < tabsNav.length; i++) {
+		let tabsNavElements = tabsNav[i].querySelectorAll('[data-tab]')
+		for (iElements = 0; iElements < tabsNavElements.length; iElements++) {
+			if (tabsNavElements[iElements].classList.contains('active')) {
+				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
+				for (j = 0; j < tabsBlocks.length; j++) {
+					if (tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive) > -1) {
+						console.log(tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive))
+						tabsBlocks[j].classList.add('active')
+					}
+				}
+			}
+		}
+	}
+	
+}
+for (i = 0; i < tabsButtonTitle.length; i++) {
+	tabsButtonTitle[i].addEventListener('click', function (e) {
+		this.classList.toggle('active')
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
+for (i = 0; i < tabsNav.length; i++) {
+	tabsNav[i].addEventListener('click', function (e) {
+		if (e.target.closest('[data-tab]')) {
+			let tabsNavElements = this.querySelector('[data-tab].active')
+			tabsNavElements ? tabsNavElements.classList.remove('active') : false
+			e.target.closest('[data-tab]').classList.add('active')
+			tabsActiveStart()
+			e.preventDefault()
+			e.stopPropagation()
+			return false
+		}
+	})
+}
+tabsActiveStart()
+
+
 //js popup wrap
 const togglePopupButtons = document.querySelectorAll('.js-btn-popup-toggle')
 const closePopupButtons = document.querySelectorAll('.js-btn-popup-close')
@@ -75,8 +126,8 @@ popupElements.forEach(element => {
 			element.classList.add('select-active')
 			let popupElementActive = element.querySelector('.js-popup-block .active').innerHTML
 			let popupElementButton = element.querySelector('.js-btn-popup-toggle')
-			popupElementButton.querySelector('.button-title').innerHTML = ''
-			popupElementButton.querySelector('.button-title').insertAdjacentHTML('beforeend', popupElementActive)
+			popupElementButton.innerHTML = ''
+			popupElementButton.insertAdjacentHTML('beforeend', popupElementActive)
 		} else {
 			element.classList.remove('select-active')
 		}
@@ -89,8 +140,8 @@ popupElements.forEach(element => {
 				this.classList.add('active')
 				let popupElementActive = element.querySelector('.js-popup-block .active').innerHTML
 				let popupElementButton = element.querySelector('.js-btn-popup-toggle')
-				popupElementButton.querySelector('.button-title').innerHTML = ''
-				popupElementButton.querySelector('.button-title').insertAdjacentHTML('beforeend', popupElementActive)
+				popupElementButton.innerHTML = ''
+				popupElementButton.insertAdjacentHTML('beforeend', popupElementActive)
 				popupElementsClear()
 				popupElementsClose()
 				if (!this.closest('.js-tabs-nav')) {
@@ -103,6 +154,45 @@ popupElements.forEach(element => {
 	}
 })
 
+
+//catalog view toggle
+const catalogViewRows = document.querySelectorAll('.js-catalog-view-rows')
+const catalogViewTiles = document.querySelectorAll('.js-catalog-view-tiles')
+const catalogItems = document.querySelectorAll('.catalog-box')
+for (i = 0;i < catalogViewRows.length;i++) {
+	
+	catalogViewRows[0].addEventListener('click', function(e) {
+		if (this.classList.contains('active')) {
+			// this.classList.remove('active')
+			// catalogItems[0].classList.remove('view-rows')
+			// catalogViewTiles[0].classList.add('active')
+		} else {
+			this.classList.add('active')
+			catalogItems[0].classList.add('view-rows')
+			catalogViewTiles[0].classList.remove('active')
+		}
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
+for (i = 0;i < catalogViewTiles.length;i++) {
+
+	catalogViewTiles[0].addEventListener('click', function(e) {
+		if (this.classList.contains('active')) {
+			// this.classList.remove('active')
+			// catalogItems[0].classList.add('view-rows')
+			// catalogViewRows[0].classList.add('active')
+		} else {
+			this.classList.add('active')
+			catalogItems[0].classList.remove('view-rows')
+			catalogViewRows[0].classList.remove('active')
+		}
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+}
 
 
 //mobile menu
@@ -134,34 +224,54 @@ for (i = 0;i < tglButtons.length;i++) {
 
 
 // filter toggle
-const mainFilterBox = document.querySelector('.main-filter-box');
-mainFilterBox.addEventListener('click', function(event) {
-  if (event.target.matches('.field-ext a')) {
-    const isOpen = mainFilterBox.classList.toggle('show-ext');
-    document.body.classList.toggle('filter-show');
-    if (window.innerWidth > 1023) {
-      requestAnimationFrame(() => {
-        mainFilterBox.querySelector('.filter-ext-wrap').style.display = isOpen ? 'block' : 'none';
-      });
-    }
-	event.preventDefault()
-	event.stopPropagation()
-	return false
-  } else if (event.target.matches('.js-filter-close')) {
-    mainFilterBox.classList.remove('show-ext');
-    document.body.classList.remove('filter-show');
-	event.preventDefault()
-	event.stopPropagation()
-	return false
-  } else if (event.target.matches('.js-filter-close')) {
-    mainFilterBox.classList.add('show-ext');
-    document.body.classList.add('filter-show');
-	event.preventDefault()
-	event.stopPropagation()
-	return false
-  }
-});
-
+const mainFilterBox = document.querySelector('.js-filter');
+const mainFilterBoxOpen = document.querySelector('.js-filter-open');
+const mainFilterBoxToggle = document.querySelectorAll('.js-filter-section-toggle');
+if (mainFilterBoxOpen) {
+	mainFilterBoxOpen.addEventListener('click', function(event) {
+		mainFilterBox.classList.add('show-ext');
+		  document.body.classList.add('filter-show');
+		  event.preventDefault()
+		  event.stopPropagation()
+		  return false
+	  });
+}
+if (mainFilterBoxToggle) {
+	for (i=0;i<mainFilterBoxToggle.length;i++) {
+		mainFilterBoxToggle[i].addEventListener('click', function(event) {
+			this.classList.toggle('active')
+			  event.preventDefault()
+			  event.stopPropagation()
+			  return false
+		  });
+	}
+}
+if (mainFilterBox) {
+	mainFilterBox.addEventListener('click', function(event) {
+		if (event.target.matches('.field-ext a')) {
+		  const isOpen = mainFilterBox.classList.toggle('show-ext');
+		  document.body.classList.toggle('filter-show');
+		  if (window.innerWidth > 1023) {
+			  mainFilterBox.querySelector('.filter-ext-wrap').style.display = isOpen ? 'block' : 'none';
+		  }
+		  event.preventDefault()
+		  event.stopPropagation()
+		  return false
+		} else if (event.target.matches('.js-filter-close')) {
+		  mainFilterBox.classList.remove('show-ext');
+		  document.body.classList.remove('filter-show');
+		  event.preventDefault()
+		  event.stopPropagation()
+		  return false
+		} else if (event.target.matches('.js-filter-open')) {
+		  mainFilterBox.classList.add('show-ext');
+		  document.body.classList.add('filter-show');
+		  event.preventDefault()
+		  event.stopPropagation()
+		  return false
+		}
+	  });
+}
 
 
 
@@ -196,6 +306,102 @@ $(document).ready(function(){
 			});
 		}
 	}
+
+
+	//gallery slider
+	if (!!$('.photos-slider-box').offset()) {
+		let pSlider = $('.photos-slider-box .slider-wrap .slider').slick({
+			dots: false,
+			slidesToShow: 1,
+			infinite: true,
+			prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+			nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						dots: true,
+					}
+				},
+			]
+		});
+		let pSliderPreview = $('.photos-slider-box .slider-preview-wrap .slider').slick({
+			dots: false,
+			slidesToShow: 3,
+			vertical: true,
+			infinite: false,
+			prevArrow: false,
+			nextArrow: false,
+		});
+		//pSlider.slick('refresh');
+		//pSliderPreview.slick('refresh');
+		$('.photos-slider-box .slider-wrap .slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+			$('.photos-slider-box .slider-preview-wrap .sl-wrap.active').removeClass('active');
+			$('.photos-slider-box .slider-preview-wrap .elm-photo[data-slide="' + currentSlide + '"]').parent().addClass('active');
+		});
+		$('.photos-slider-box .slider-preview-wrap .slider .elm-photo').click(function () {
+			let newSlide = $(this).attr('data-slide');
+			$('.photos-slider-box .slider-preview-wrap .sl-wrap.active').removeClass('active');
+			$(this).parent().addClass('active');
+			$('.photos-slider-box .slider-wrap .slider').slick('slickGoTo', newSlide);
+			return false;
+		})
+		$('.js-popup-open').on('click', function() {
+			if ($(this).attr('data-popup') == 'popup-card') {
+				pSlider.slick('refresh');
+				pSliderPreview.slick('refresh');
+			}
+		})
+	}
+	//VARIABLE
+	if (!!$('.VARIABLE').offset()) {
+		$('.VARIABLE .slider').slick({
+			dots: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			touchThreshold: 100,
+			variableWidth: false,
+			infinite: true,
+			adaptiveHeight: false,
+			rows: 1,
+			swipeToSlide: true,
+			autoplay: false,
+			autoplaySpeed: 5000,
+			prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+			nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+			]
+		});
+		
+	}
+
+
+	//compare
+	$('.compare-box .tbl-title-wrap').on('click', function() {
+		$(this).toggleClass('active');
+		return false;
+	})
+
+	//frm counter   
+	$('.js-counter .js-button-counter-minus').on('click', function(){
+		var cnt=$(this).parents('.js-counter').find('.js-input-counter').val();
+		cnt=parseInt(cnt);
+		if (cnt>0) {
+			$(this).parents('.js-counter').find('.js-input-counter').val(cnt-1);
+		}
+		return false;
+	})
+	$('.js-counter .js-button-counter-plus').on('click', function(){
+		var cnt=$(this).parents('.js-counter').find('.js-input-counter').val();
+		$(this).parents('.js-counter').find('.js-input-counter').val(cnt-1+2);
+		return false;
+	})
 
 
 	//rangeSlider

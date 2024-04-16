@@ -210,11 +210,93 @@
         <!-- page -->
         <div class="page-full">
 
+            <!--breadcrumbs-box-->
+            <div class="breadcrumbs-box">
+                <ol class="menu">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Каталог товаров</a></li>
+                    <li><a href="">Зимние товары </a></li>
+                </ol>
+            </div>
+            <!--/breadcrumbs-box-->
+
             <!--content-outer-box-->
             <div class="content-outer-box">
 
                 <!--content-wrap-->
                 <div class="content-wrap">
+
+                    <!--catalog-title-box-->
+                    <div class="catalog-title-box">
+                        <div class="title-inner-wrap">
+                            <div class="title-wrap">
+                                <h1 class="h1-title title-page">Велосипеды <span class="title-info">/ 16 789 шт.</span>
+                                </h1>
+                            </div>
+                            <div class="actions-wrap">
+                                <div class="action-wrap action-filter">
+                                    <a href="" class="btn-action-ico ico-filter js-filter-open"></a>
+                                </div>
+                                <div class="action-wrap action-view">
+                                    <a href="" class="btn-action-ico ico-view-rows js-catalog-view-rows"></a>
+                                    <a href="" class="btn-action-ico ico-view-tiles js-catalog-view-tiles active"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons-inner-wrap">
+                            <ul class="list">
+                                <li>
+                                    <a href="" class="btn button-filter active js-btn-tgl">Взрослые</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-filter js-btn-tgl">Любительские</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-filter js-btn-tgl">Детские</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="buttons-inner-wrap buttons-brands">
+                            <div class="buttons-title">Популярные бренды:</div>
+                            <ul class="list">
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Aspect</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Stels</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Forward</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Merida</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl active">Stinger</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Stark</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Giant</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Format</a></li>
+                                <li><a href="" class="link-main link-dashed js-btn-tgl">Welt</a></li>
+                            </ul>
+                        </div>
+                        <div class="buttons-inner-wrap buttons-categories">
+                            <ul class="list">
+                                <li>
+                                    <a href="" class="btn button-filter active">По пулярности</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-filter">Сначала дешевые</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-filter">Сначала дорогие</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-filter">По скидке</a>
+                                </li>
+                            </ul>
+                            <div class="button-reset">
+                                <a href="" class="btn button-gray">
+                                    <div class="button-title">Очистить все</div>
+                                    <div class="button-ico">
+                                        <img src="./img/icons/clear.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/catalog-title-box-->
+
                     <!--catalog-box-->
                     <div class="catalog-box">
                         <div class="items-wrap">
@@ -222,13 +304,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-alert">Sale</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat01.png" alt="">
@@ -244,19 +320,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-title">Stark Viva 27.2 D (2023) <div class="tile-sticker color-alert">Sale</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl active">
+                                            <a href="" class="btn js-btn-tgl">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -267,13 +363,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-alert">Sale</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat02.png" alt="">
@@ -289,19 +379,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Adriatica Movie 6V Man (2022)</div>
+                                        <div class="tile-title">Adriatica Movie 6V Man (2022) <div class="tile-sticker color-alert">Sale</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -312,13 +422,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-att">Распродажа</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat03.png" alt="">
@@ -328,19 +432,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Format Kids 14 (2022)</div>
+                                        <div class="tile-title">Format Kids 14 (2022) <div class="tile-sticker color-att">Распродажа</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock stock-order">Под заказ</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock stock-order">Под заказ</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -351,12 +475,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl active"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat04.png" alt="">
@@ -370,18 +489,37 @@
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
                                         <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl active"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -392,12 +530,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat05.png" alt="">
@@ -414,18 +547,37 @@
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
                                         <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl active">
+                                            <a href="" class="btn js-btn-tgl">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -436,13 +588,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-alert">Sale</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat01.png" alt="">
@@ -458,19 +604,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-title">Stark Viva 27.2 D (2023) <div class="tile-sticker color-alert">Sale</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl active">
+                                            <a href="" class="btn js-btn-tgl">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -481,13 +647,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-alert">Sale</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat02.png" alt="">
@@ -503,19 +663,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Adriatica Movie 6V Man (2022)</div>
+                                        <div class="tile-title">Adriatica Movie 6V Man (2022) <div class="tile-sticker color-alert">Sale</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -526,13 +706,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                        <div class="tile-sticker color-att">Распродажа</div>
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat03.png" alt="">
@@ -542,19 +716,39 @@
                                     </div>
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
-                                        <div class="tile-title">Format Kids 14 (2022)</div>
+                                        <div class="tile-title">Format Kids 14 (2022) <div class="tile-sticker color-att">Распродажа</div>
+                                        </div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock stock-order">Под заказ</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock stock-order">Под заказ</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -565,12 +759,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl active"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat04.png" alt="">
@@ -584,18 +773,37 @@
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
                                         <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl active"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl">
+                                            <a href="" class="btn button-gray-light js-btn-tgl button-disabled">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -606,12 +814,7 @@
                             <div class="item-wrap">
                                 <div class="item-tile-catalog">
                                     <a href="" class="tile-link"></a>
-                                    <div class="tile-buttons-wrap">
-                                        <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
-                                        <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
-                                    </div>
-                                    <div class="tile-stickers-wrap">
-                                    </div>
+
                                     <div class="tile-photo-wrap">
                                         <a href="" class="tile-photo photo-contain">
                                             <img src="./img/cat05.png" alt="">
@@ -628,18 +831,37 @@
                                     <div class="tile-title-wrap">
                                         <div class="tile-subtitle page-subtitle">Женский велосипед</div>
                                         <div class="tile-title">Stark Viva 27.2 D (2023)</div>
+                                        <div class="tile-desk">
+                                            <ul class="list">
+                                                <li>- Городской велосипед</li>
+                                                <li>- Модель оснащена алюминиевой рамой</li>
+                                                <li>- Дисковые гидравлические тормоза</li>
+                                                <li>- Задний переключатель microSHIFT MEZZO</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="tile-actions-wrap">
-                                        <div class="tile-price-wrap">
-                                            <div class="tile-price price-old"><span class="price-title">33 930</span> <span class="price-discount">-11%</span></div>
-                                            <div class="tile-price" data-unit=" ₽"><span class="price-title">30 330</span></div>
-                                            <div class="tile-stock">В наличии</div>
+                                        <div class="tile-actions-outer-wrap">
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price price-old"><span class="price-title">33
+                                                        930</span> <span class="price-discount">-11%</span></div>
+                                                <div class="tile-price" data-unit=" ₽"><span class="price-title">30
+                                                        330</span></div>
+                                            </div>
+                                            <div class="tile-actions-inner-wrap">
+                                                <div class="tile-buttons-wrap">
+                                                    <a href="" class="btn-action-ico ico-fav button-gray-light js-btn-tgl active"></a>
+                                                    <a href="" class="btn-action-ico ico-compare button-gray-light js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-stock">В наличии</div>
+                                            </div>
                                         </div>
                                         <div class="tile-cart-wrap">
-                                            <a href="" class="btn button-gray-light js-btn-tgl active">
+                                            <a href="" class="btn js-btn-tgl">
                                                 <div class="button-ico">
                                                     <img src="./img/icons/cart.svg" alt="">
                                                 </div>
+                                                <div class="button-title">Купить </div>
                                             </a>
                                         </div>
                                     </div>
@@ -647,6 +869,21 @@
                             </div>
                             <!--/item-wrap-->
                         </div>
+                        <!--pagenav-box-->
+                        <div class="pagenav-box">
+                            <div class="pagenav-inner-wrap">
+                                <a href="" class="btn-page button-nav button-nav-prev button-disabled"></a>
+                                <div class="pages-wrap">
+                                    <a href="" class="btn-page">1</a>
+                                    <a href="" class="btn-page active">2</a>
+                                    <a href="" class="btn-page">3</a>
+                                    <a href="" class="btn-page">4</a>
+                                </div>
+                                <a href="" class="btn-page button-nav button-nav-next"></a>
+                            </div>
+                            <div class="total-inner-wrap">Показано 30 из 1317</div>
+                        </div>
+                        <!--/pagenav-box-->
                     </div>
                     <!--/catalog-box-->
                 </div>
@@ -654,7 +891,524 @@
 
                 <!--side-wrap-->
                 <div class="side-wrap">
-                    333333
+
+                    <!--side-filter-box-->
+                    <div class="side-filter-box js-filter">
+                        <!--filter-title-wrap-->
+                        <div class="filter-title-wrap">
+                            <div class="filter-title">Фильтр</div>
+                            <a href="" class="btn-action-ico ico-close js-filter-close"></a>
+                        </div>
+                        <!--/filter-title-wrap-->
+                        <!--filter-sections-wrap-->
+                        <div class="filter-sections-wrap">
+
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap section-open section-no-border">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle active">Цена</a>
+                                <div class="filter-section-content">
+                                    <div class="frm-field-range">
+                                        <div class="field-range-wrap">
+                                            <div class="field-range" data-unit="₽">
+                                                <label class="field-range-title">от</label>
+                                                <input type="text" class="form-input" data-range-slider-min="rangeSlider">
+                                            </div>
+                                            <div class="field-range" data-unit="₽">
+                                                <label class="field-range-title">до</label>
+                                                <input type="text" class="form-input" data-range-slider-max="rangeSlider">
+                                            </div>
+                                        </div>
+                                        <div class="field-range-slider">
+                                            <div id="rangeSlider" data-min="0" data-max="200000" data-min-current="18000" data-max-current="128000"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap section-open">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle active">Тип</a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-01" checked>
+                                                <label for="sel01-01">Все типы</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-02">
+                                                <label for="sel01-02">Детские</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-03">
+                                                <label for="sel01-03">BMX</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-04">
+                                                <label for="sel01-04">Двухподвесы</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-05">
+                                                <label for="sel01-05">Комфортные</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-06">
+                                                <label for="sel01-06">Горные</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-07">
+                                                <label for="sel01-07">Подростковые</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-08">
+                                                <label for="sel01-08">Детские</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-09">
+                                                <label for="sel01-09">BMX</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-10">
+                                                <label for="sel01-10">Двухподвесы</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-11">
+                                                <label for="sel01-11">Комфортные</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-12">
+                                                <label for="sel01-12">Горные</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-13">
+                                                <label for="sel01-13">Подростковые</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-14">
+                                                <label for="sel01-14">Комфортные</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="radio" name="sel01" id="sel01-15">
+                                                <label for="sel01-15">Горные</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle">Подтип</a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel02-01" ch2cked>
+                                                <label for="sel02-01">20 дюймов</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel02-02">
+                                                <label for="sel02-02">24 дюймов</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel02-03">
+                                                <label for="sel02-03">26 дюймов</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel02-04">
+                                                <label for="sel02-04">Складные</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle">Бренд</a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-01" ch2cked>
+                                                <label for="sel03-01">Aspect</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-02">
+                                                <label for="sel03-02">Bergamont </label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-03">
+                                                <label for="sel03-03">Scott</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-04">
+                                                <label for="sel03-04">Titan Racing</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-05">
+                                                <label for="sel03-05">Royal Baby</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-06">
+                                                <label for="sel03-06">Stels</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-07">
+                                                <label for="sel03-07">Giant</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-08">
+                                                <label for="sel03-08">Welt</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-09">
+                                                <label for="sel03-09">Eltreco</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-10">
+                                                <label for="sel03-10">Dewolf</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-11">
+                                                <label for="sel03-11">Stinger</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-12">
+                                                <label for="sel03-12">Bear Bike</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-13">
+                                                <label for="sel03-13">Titan Racing</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-14">
+                                                <label for="sel03-14">Eltreco</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel03-15">
+                                                <label for="sel03-15">Adriatica</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle active">Материал</a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel08-01" ch2cked>
+                                                <label for="sel08-01">Алюминий/Пластик</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel08-02">
+                                                <label for="sel08-02">Алюминий/Сталь</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel08-03">
+                                                <label for="sel08-03">Пластик/Алюминий</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel08-04">
+                                                <label for="sel08-04">Пластик/Резина</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elm-filter-total" style="top: 45px;left: 140px;">302 модели</div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle">
+                                    Тип крепления
+                                    <div class="elm-help"></div>
+                                </a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-01" ch2cked>
+                                                <label for="sel04-01">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-02">
+                                                <label for="sel04-02">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-03">
+                                                <label for="sel04-03">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-04">
+                                                <label for="sel04-04">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-05">
+                                                <label for="sel04-05">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-06">
+                                                <label for="sel04-06">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-07">
+                                                <label for="sel04-07">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-08">
+                                                <label for="sel04-08">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-09">
+                                                <label for="sel04-09">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-10">
+                                                <label for="sel04-10">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-11">
+                                                <label for="sel04-11">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-12">
+                                                <label for="sel04-12">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-13">
+                                                <label for="sel04-13">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-14">
+                                                <label for="sel04-14">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel04-15">
+                                                <label for="sel04-15">Тип крепления</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+                            <!--filter-section-wrap-->
+                            <div class="filter-section-wrap">
+                                <a href="" class="btn-popup-toggle js-filter-section-toggle">Диаметр колеса</a>
+                                <div class="filter-section-content">
+                                    <div class="filter-content-scroll">
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-01" ch2cked>
+                                                <label for="sel05-01">10”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-02">
+                                                <label for="sel05-02">28”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-03">
+                                                <label for="sel05-03">12”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-04">
+                                                <label for="sel05-04">30”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-05">
+                                                <label for="sel05-05">14”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-06">
+                                                <label for="sel05-06">32”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-07">
+                                                <label for="sel05-07">16”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-08">
+                                                <label for="sel05-08">34”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-09">
+                                                <label for="sel05-09">18”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-10">
+                                                <label for="sel05-10">36”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-11">
+                                                <label for="sel05-11">20”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-12">
+                                                <label for="sel05-12">38”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-13">
+                                                <label for="sel05-13">22”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-14">
+                                                <label for="sel05-14">24”</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-select-wrap">
+                                            <div class="frm-select">
+                                                <input type="checkbox" id="sel05-15">
+                                                <label for="sel05-15">26”</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/filter-section-wrap-->
+
+                        </div>
+                        <!--/filter-sections-wrap-->
+                        <!--filter-section-actions-->
+                        <div class="filter-section-actions">
+                            <div class="action-button">
+                                <button type="submit" class="btn"><b>Показать</b>&nbsp;&nbsp;/&nbsp;&nbsp;689</button>
+                            </div>
+                            <div class="action-reset">
+                                <button type="reset" class="btn button-reset">
+                                    <div class="button-title">Очистить фильтр</div>
+                                </button>
+                            </div>
+                        </div>
+                        <!--/filter-section-actions-->
+                    </div>
+                    <!--/side-filter-box-->
+
                 </div>
                 <!--/side-wrap-->
 

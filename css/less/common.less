@@ -144,7 +144,8 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #C4C4C4;
+            background: var(--clr-border-vlight);
+			transition: none;
             &:hover, &.active {
                 background: var(--clr-att);
             }
@@ -153,6 +154,7 @@
     .slick-active {
         button {
             background: var(--clr-att);
+			width: 14px;height: 14px;
         }
     }
 }
@@ -240,7 +242,7 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
         li {
             button {
                 &:hover, &.active {
-                    background-color: #c4c4c4;
+                    background-color: var(--clr-border-vlight);
                 }
             }
         }
